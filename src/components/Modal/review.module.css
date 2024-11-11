@@ -1,0 +1,30 @@
+.overlay {
+    background-color: rgba(0, 0, 0, .7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.modal {
+    padding: 20px;
+    width: 40vw;
+    height: 100vh;
+    border-radius: 10px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -30%);
+}
+
+.btn {
+    font-size: 30px;
+    margin-left: auto;
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}

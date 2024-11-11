@@ -1,0 +1,19 @@
+.item {
+    padding: 40px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 7px rgb(160, 160, 160);
+}
+
+.title {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #e83a4b;
+}
+
+.combo {
+    text-align: start;
+    margin-bottom: 10px;
+    color: rgb(118, 118, 118);
+    font-size: 12px;
+}

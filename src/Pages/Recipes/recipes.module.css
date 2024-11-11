@@ -1,0 +1,14 @@
+.list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 10px 5px;
+}
+
+.title {
+    font-size: 48px;
+    text-align: center;
+    font-family: "Lobster";
+    margin-bottom: 30px;
+    color: #e83a4b;
+}

@@ -1,0 +1,30 @@
+.container  {
+    max-width: 500px;
+    display: flex;
+    gap: 20px;
+}
+
+.container a {
+    font-size: 20px;
+}
+
+.btn {
+    font-size: 18px;
+    border: none;
+    background-color: transparent;
+}
+
+
+@media (max-width: 620px) {
+    .container {
+        gap: 10px;
+    }
+
+    .container a {
+        font-size: 12px;
+    }
+
+    .btn {
+        font-size: 12px;
+    }
+}
