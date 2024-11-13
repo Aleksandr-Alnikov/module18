@@ -1,7 +1,17 @@
 import style from './factsItem.module.css';
+import {FC} from "react";
 
 
-export const FactItem = ({item}) => {
+interface Item {
+    title: string;
+    description: string;
+}
+
+interface FactProps {
+    item: Item;
+}
+
+export const FactItem: FC<FactProps> = ({item}) => {
 
     return (
         <li className={style.item}>

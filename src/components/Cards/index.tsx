@@ -1,20 +1,18 @@
 import style from "./style.module.css"
-import allBeans from '../../../beans.json';
 import Card from "../Card";
-import {useEffect, useState} from "react";
-import {Types} from "../types/types";
-import {useDispatch, useSelector} from "react-redux";
+import {FC, useEffect} from "react";
+import {useSelector} from "react-redux";
 import {fetchBeans, filterBeans} from "../../Redux/beansSlice";
-import {RootState} from "../../Redux/store";
+import {RootState, useAppDispatch} from "../../Redux/store";
 
 
 type Props = {
-    filterValue: string
+    filterValue: string,
 };
 
 
-const Cards: Props = ({filterValue}) => {
-    const dispatch = useDispatch();
+const Cards: FC<Props> = ({filterValue}) => {
+    const dispatch = useAppDispatch();
     const {updateBeans, isLoading, isError} = useSelector((state:RootState) => state.beans);
 
     useEffect(() => {

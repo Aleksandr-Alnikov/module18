@@ -1,8 +1,21 @@
 import style from './recipe.module.css';
 import {Link} from "react-router-dom";
+import {FC} from "react";
 
 
-export const Recipe = ({item}) => {
+interface Item {
+    recipeId: number;
+    name: string;
+    description: string;
+    cookTime: string;
+    makingAmount: string;
+}
+
+interface RecipeProps {
+    item: Item;
+}
+
+export const Recipe: FC<RecipeProps> = ({item}) => {
 
     return (
         <Link to={`/recipe/${item.recipeId}`} className={style.item}>

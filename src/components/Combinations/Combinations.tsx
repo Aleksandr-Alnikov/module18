@@ -1,7 +1,17 @@
 import style from './combinations.module.css';
+import {FC} from "react";
 
 
-export const Combinations = ({item}) => {
+interface Item {
+    name: string;
+    tag: string[];
+}
+
+interface CombinationsProps {
+    item: Item;
+}
+
+export const Combinations: FC<CombinationsProps> = ({item}) => {
 
     return (
         <li className={style.item}>

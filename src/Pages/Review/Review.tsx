@@ -1,5 +1,4 @@
 import style from './review.module.css';
-import {FormEvent} from "react";
 import {SubmitHandler, useForm} from "react-hook-form";
 
 

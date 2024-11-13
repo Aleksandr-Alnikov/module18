@@ -1,24 +1,19 @@
-import {Recipes} from "../components/types/types";
+import {Recipes, Recipe} from "../components/types/types";
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 
 
-type Recipe = {
-    name: string,
-    description: string,
-    cookTime: string,
-    makingAmount: string,
-}
+
 
 type RecipesState = {
-    facts: Recipes[] | null;
-    currentRecipe: Recipe | null;
+    recipes: Recipes[] | null;
+    recipeData: Recipe | null;
     isLoading: boolean;
     isError: boolean;
 };
 
 const initialState: RecipesState = {
-    facts: null,
-    currentRecipe: null,
+    recipes: null,
+    recipeData: null,
     isLoading: false,
     isError: false,
 };
@@ -55,7 +50,7 @@ const recipesSlice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder
-            .addCase(fetchRecipes.pending, (state, action) => {
+            .addCase(fetchRecipes.pending, (state) => {
                 state.isLoading = true;
                 state.isError = false;
             })

@@ -24,7 +24,7 @@ const Nav = () => {
               <Link to='/combinations'>Combinations</Link>
               <Link to='/history'>History</Link>
               <button className={style.btn} onClick={openModal}>Review</button>
-              {setIsOpen && <ReviewModal modal={isOpen} closeModal={closeModal}/>}
+              {isOpen && <ReviewModal modal={isOpen} closeModal={closeModal}/>}
               <SwitchTheme />
           </nav>
 

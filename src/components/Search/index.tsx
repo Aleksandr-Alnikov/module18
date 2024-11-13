@@ -1,5 +1,5 @@
 import style from "./style.module.css"
-import {ChangeEvent, Dispatch, useState} from "react";
+import {ChangeEvent, Dispatch, FC, useState} from "react";
 import * as React from "react";
 
 type  Props = {

@@ -5,6 +5,7 @@ import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 type BeansState = {
     beans: Types[] | null;
     updateBeans: Types[] | null;
+    beanData: Types | null;
     isLoading: boolean;
     isError: boolean;
 };
@@ -12,6 +13,7 @@ type BeansState = {
 const initialState: BeansState = {
     beans: null,
     updateBeans: null,
+    beanData: null,
     isLoading: false,
     isError: false,
 };

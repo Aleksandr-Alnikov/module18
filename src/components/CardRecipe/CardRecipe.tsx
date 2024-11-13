@@ -1,16 +1,15 @@
 import style from "./cardRecipe.module.css"
-import {FC, useEffect, useState} from "react";
-import {Types} from "../types/types";
-import {Link, useParams} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
-import {RootState} from "../../Redux/store";
+import {useEffect} from "react";
+import {useParams} from "react-router-dom";
+import {useSelector} from "react-redux";
+import {RootState, useAppDispatch} from "../../Redux/store";
 import {fetchRecipesId} from "../../Redux/recipesSlice";
 
 
 
 const CardRecipe = () => {
     const params = useParams();
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
     const {recipeData} = useSelector((state: RootState) => state.recipes);
 
     useEffect(() => {

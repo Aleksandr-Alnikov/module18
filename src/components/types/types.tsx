@@ -29,12 +29,25 @@ export type History = {
     mileStoneId: number,
     title: string,
     description: string,
+    year: string,
 }
 
 export type Recipes = {
+    name:string,
     recipeId: number,
     title: string,
     description: string,
     cookTime: string,
     makingAmount: string,
+}
+
+export type Recipe = {
+    name: string,
+    description: string,
+    cookTime: string,
+    makingAmount: string,
+    imageUrl: string,
+    flavorName: string,
+    ingredients: string[],
+    directions: string,
 }

@@ -1,12 +1,12 @@
 import style from './style.module.css';
 import {useEffect} from "react";
 import {FactItem} from "../../components/FactItem/FactItem";
-import {useDispatch, useSelector} from "react-redux";
-import {RootState} from "../../Redux/store";
+import {useSelector} from "react-redux";
+import {RootState, useAppDispatch} from "../../Redux/store";
 import {fetchFacts} from "../../Redux/factsSlice";
 
 const Facts = () => {
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
     const {facts} = useSelector((state:RootState) => state.facts);
 
     useEffect(() => {

@@ -1,13 +1,13 @@
 import style from './recipes.module.css';
 import {useEffect} from "react";
 import {Recipe} from "../../components/Recipe/Recipe";
-import {useDispatch, useSelector} from "react-redux";
-import {RootState} from "../../Redux/store";
+import {useSelector} from "react-redux";
+import {RootState, useAppDispatch} from "../../Redux/store";
 import {fetchRecipes} from "../../Redux/recipesSlice";
 
 
 const Recipes = () => {
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
     const{recipes} = useSelector((state:RootState) => state.recipes);
 
     useEffect(() => {

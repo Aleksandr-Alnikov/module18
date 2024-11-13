@@ -1,14 +1,14 @@
 import style from './style.module.css';
 import {useParams} from "react-router-dom";
 import {useEffect} from "react";
-import {useDispatch, useSelector} from "react-redux";
-import {RootState} from "../../Redux/store";
+import {useSelector} from "react-redux";
+import {RootState, useAppDispatch} from "../../Redux/store";
 import {fetchBeanId} from "../../Redux/beansSlice";
 
 
 const BeanPage = () => {
     const params = useParams();
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
     const {beanData} = useSelector((state: RootState) => state.beans);
 
     useEffect(() => {

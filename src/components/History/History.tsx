@@ -1,7 +1,17 @@
 import style from './history.module.css';
+import {FC} from "react";
 
 
-export const History = ({item}) => {
+interface Item {
+    year: string;
+    description: string;
+}
+
+interface HistoryProps {
+    item: Item;
+}
+
+export const History: FC<HistoryProps> = ({item}) => {
 
     return (
         <li className={style.item}>

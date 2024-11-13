@@ -6,9 +6,16 @@ import Review from "../../Pages/Review/Review";
 
 type TProps = {
     closeModal: () => void,
+    modal: boolean,
 };
 
 const ModalReview:FC<TProps> = ({closeModal, modal}) => {
+    const portalRoot = document.getElementById('root-portal');
+
+    if (!portalRoot) {
+        return null;
+    }
+
     if (!modal) {
         return null;
     }
@@ -20,7 +27,7 @@ const ModalReview:FC<TProps> = ({closeModal, modal}) => {
                 <Review />
             </div>
         </div>,
-        document.getElementById('root-portal')
+        portalRoot
     )
 }
 

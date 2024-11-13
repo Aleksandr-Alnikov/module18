@@ -1,6 +1,6 @@
 import style from './style.module.css';
 import image from '../../img/main.gif';
-import Header from "../../components/Header";
+
 
 
 const Home = () => {

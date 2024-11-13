@@ -30,7 +30,7 @@ const factsSlice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder
-            .addCase(fetchHistory.pending, (state, action) => {
+            .addCase(fetchHistory.pending, (state) => {
                 state.isLoading = true;
                 state.isError = false;
             })

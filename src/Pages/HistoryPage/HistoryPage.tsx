@@ -1,13 +1,13 @@
 import style from './historyPage.module.css';
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import {History} from "../../components/History/History";
-import {useDispatch, useSelector} from "react-redux";
-import {RootState} from "../../Redux/store";
+import {useSelector} from "react-redux";
+import {RootState, useAppDispatch} from "../../Redux/store";
 import {fetchHistory} from "../../Redux/historySlice";
 
 
 const HistoryPage = () => {
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
     const {history} = useSelector((state: RootState) => state.history);
 
 
