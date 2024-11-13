@@ -18,11 +18,11 @@ const Nav = () => {
     return (
       <>
           <nav className={style.container}>
-              <Link to='/beans'>Beans</Link>
-              <Link to='/facts'>Facts</Link>
-              <Link to='/recipes'>Recipes</Link>
-              <Link to='/combinations'>Combinations</Link>
-              <Link to='/history'>History</Link>
+              <Link to='/module18/beans'>Beans</Link>
+              <Link to='/module18/facts'>Facts</Link>
+              <Link to='/module18/recipes'>Recipes</Link>
+              <Link to='/module18/combinations'>Combinations</Link>
+              <Link to='/module18/history'>History</Link>
               <button className={style.btn} onClick={openModal}>Review</button>
               {isOpen && <ReviewModal modal={isOpen} closeModal={closeModal}/>}
               <SwitchTheme />

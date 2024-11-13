@@ -11,7 +11,7 @@ type Props = {
 const Card: FC<Props> = ({data}) => {
 
     return (
-        <Link to={`/bean/${data.beanId}`} className={style.card}>
+        <Link to={`/module18/bean/${data.beanId}`} className={style.card}>
             <img src={data.imageUrl} alt={data.flavorName} />
             <h2>{data.flavorName}</h2>
             <p>{data.description}</p>

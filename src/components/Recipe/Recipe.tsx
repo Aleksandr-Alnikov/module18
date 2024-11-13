@@ -18,7 +18,7 @@ interface RecipeProps {
 export const Recipe: FC<RecipeProps> = ({item}) => {
 
     return (
-        <Link to={`/recipe/${item.recipeId}`} className={style.item}>
+        <Link to={`/module18/recipe/${item.recipeId}`} className={style.item}>
             <article>
                 <h2 className={style.title}>{item.name}</h2>
                 <p className={style.description}>{item.description}</p>
