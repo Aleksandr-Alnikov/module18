@@ -15,7 +15,7 @@ import Review from "./Pages/Review/Review";
 
 const router = createBrowserRouter([
     {
-        path: 'module18',
+        path: '/module18',
         element: <Layout />,
         loader: Loader,
         children: [
